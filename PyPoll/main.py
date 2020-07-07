@@ -31,5 +31,6 @@ with open(election_csv, 'r') as csvfile:
 print(total_votes)
 
 for candidate_name, vote_count in candidates.items():
-        print(f"{candidate_name}: {vote_count}")
+    percent = round((vote_count/total_votes)*100,3)
+    print(f"{candidate_name}: {percent}% ({vote_count})")
 
