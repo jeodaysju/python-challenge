@@ -28,9 +28,15 @@ with open(election_csv, 'r') as csvfile:
         else:
             candidates[name] = candidates[name] + 1
 
-print(total_votes)
-
+# print(total_votes)
+winner = 0
 for candidate_name, vote_count in candidates.items():
+    if vote_count > winner:
+        winner = vote_count
+    print(winner)
+    if vote_count == winner:
+        can_winner = candidate_name
+        print(f"Winner: {can_winner}")
     percent = round((vote_count/total_votes)*100,3)
     print(f"{candidate_name}: {percent}% ({vote_count})")
 
