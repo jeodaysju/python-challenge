@@ -38,7 +38,7 @@ for candidate_name, vote_count in candidates.items():
         # print(f"Winner: {can_winner}")
     percent = round((vote_count/total_votes)*100,3)
     output_str += f"{candidate_name}: {percent}% ({vote_count})\n"
-output_str = f'Election Resulsts\n----------------------\nTotal Votes: {total_votes}\n---------------------- \n'+ output_str + f'---------------------- \nWinner: {can_winner} \n'
+output_str = f'Election Results\n----------------------\nTotal Votes: {total_votes}\n---------------------- \n'+ output_str + f'---------------------- \nWinner: {can_winner} \n'
 print(output_str)
 
 file1 = open(file_to_output,"w") 
